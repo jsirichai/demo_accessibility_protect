@@ -60,6 +60,24 @@ class AccessibilityDetectPlugin: FlutterPlugin, MethodCallHandler {
         accessibilityArray.put(accessibilityObject)
       }
 
+/*
+Example: accessibilityObject
+          [
+              {
+                "applicationName": "Bitwarden",
+                "packageName": "com.x8bit.bitwarden",
+                "source": "com.android.vending"
+              },
+              {
+                "applicationName": "TeamViewer Universal Add-On",
+                "packageName": "com.teamviewer.quicksupport.addon.universal",
+                "source": "com.google.android.apps.nbu.files"
+              }
+          ]
+
+Source Detail: https://github.com/jsirichai/android-package-store
+*/
+
       return   result.success(accessibilityArray.toString());
 
     } else {
